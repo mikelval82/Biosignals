@@ -1,13 +1,8 @@
-pip install PythonQwt
-pip install PyQt5
-pip install scipy
-pip install pyhrv
-pip install pandas
-pip install importlib
-pip install pyEDFlib
-
-
-
-
-
-
+PyQt5
+pandas
+python-csv
+importlib
+PythonQwt
+pyEDFlib
+pyhrv
+scipy

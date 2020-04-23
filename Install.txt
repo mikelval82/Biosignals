@@ -1,0 +1,13 @@
+1-Download and install Anaconda, version 3.7:
+1.1-https://www.anaconda.com/distribution/
+1.2-During the install say yes to add to the environment variables PATH.
+
+2-Create Virtual environment:
+2.1-Open the cmd.
+2.2-conda create -n biosignals
+2.3-conda activate biosignals
+
+3-Install requirements.txt:
+3.1-cd Path/to/requirements.txt
+3.1-pip install -r requirements.txt
+
