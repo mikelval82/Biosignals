@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Dec 15 17:25:42 2018
-
-@author: UNED
+@author: %(Mikel Val Calvo)s
+@email: %(mikel1982mail@gmail.com)
+@institution: %(Dpto. de Inteligencia Artificial, Universidad Nacional de Educación a Distancia (UNED))
+@DOI: 10.5281/zenodo.3759262 
 """
-
+#%%
 from QTDesigner.biosignals import  Ui_MainWindows as ui
 from GENERAL import Dynamic_Import as Dyn_import
 from LOG.log import log

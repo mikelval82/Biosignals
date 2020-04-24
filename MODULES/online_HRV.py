@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 12 15:22:21 2019
-
-@author: LENOVO
+@author: %(Mikel Val Calvo)s
+@email: %(mikel1982mail@gmail.com)
+@institution: %(Dpto. de Inteligencia Artificial, Universidad Nacional de Educación a Distancia (UNED))
+@DOI: 10.5281/zenodo.3759262 
 """
+#%%
 from threading import Thread
 #from multiprocessing import Process
 from COM.tcpip_dict_client import tcpip_client as client

@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Dec 14 17:23:02 2018
-
-@author: UNED
+@author: %(Mikel Val Calvo)s
+@email: %(mikel1982mail@gmail.com)
+@institution: %(Dpto. de Inteligencia Artificial, Universidad Nacional de Educación a Distancia (UNED))
+@DOI: 10.5281/zenodo.3759262 
 """
-
+#%%
 import numpy as np
 
 #Indicates whether a strip of characters has any digits.
