@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>647</height>
+    <width>1026</width>
+    <height>743</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,14 +40,14 @@
            <widget class="QGroupBox" name="external_groupBox">
             <property name="minimumSize">
              <size>
-              <width>250</width>
-              <height>60</height>
+              <width>260</width>
+              <height>80</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>250</width>
-              <height>60</height>
+              <width>260</width>
+              <height>80</height>
              </size>
             </property>
             <property name="title">
@@ -73,14 +73,14 @@
                 <widget class="QPushButton" name="btn_user">
                  <property name="minimumSize">
                   <size>
-                   <width>75</width>
-                   <height>17</height>
+                   <width>100</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>75</width>
-                   <height>17</height>
+                   <width>100</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="text">
@@ -92,14 +92,14 @@
                 <widget class="QPushButton" name="btn_loadScript">
                  <property name="minimumSize">
                   <size>
-                   <width>75</width>
-                   <height>17</height>
+                   <width>100</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>75</width>
-                   <height>17</height>
+                   <width>100</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="text">
@@ -129,14 +129,14 @@
            <widget class="QGroupBox" name="connect_groupBox">
             <property name="minimumSize">
              <size>
-              <width>250</width>
-              <height>100</height>
+              <width>260</width>
+              <height>120</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>250</width>
-              <height>100</height>
+              <width>260</width>
+              <height>120</height>
              </size>
             </property>
             <property name="title">
@@ -158,49 +158,33 @@
                 <number>6</number>
                </property>
                <item>
-                <spacer name="empatica_left_horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                <widget class="QLineEdit" name="E4_server_IP_textEdit">
+                 <property name="text">
+                  <string>localhost</string>
                  </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
-                </spacer>
+                </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="btn_server">
                  <property name="minimumSize">
                   <size>
-                   <width>150</width>
-                   <height>17</height>
+                   <width>120</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
-                   <height>17</height>
+                   <width>120</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="text">
-                  <string>Empatica server connect</string>
+                  <string>E4 server link</string>
                  </property>
                 </widget>
-               </item>
-               <item>
-                <spacer name="empatica_rigth_horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
                </item>
               </layout>
              </item>
@@ -225,14 +209,14 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>0</width>
-                   <height>0</height>
+                   <width>70</width>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>70</width>
-                   <height>16777215</height>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="editable">
@@ -254,13 +238,13 @@
                  <property name="minimumSize">
                   <size>
                    <width>70</width>
-                   <height>17</height>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>70</width>
-                   <height>17</height>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="text">
@@ -273,13 +257,13 @@
                  <property name="minimumSize">
                   <size>
                    <width>70</width>
-                   <height>17</height>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>70</width>
-                   <height>17</height>
+                   <height>25</height>
                   </size>
                  </property>
                  <property name="text">
@@ -296,14 +280,14 @@
            <widget class="QGroupBox" name="controls_groupBox">
             <property name="minimumSize">
              <size>
-              <width>250</width>
-              <height>165</height>
+              <width>260</width>
+              <height>100</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>250</width>
-              <height>165</height>
+              <width>260</width>
+              <height>200</height>
              </size>
             </property>
             <property name="title">
@@ -312,6 +296,12 @@
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <item>
               <layout class="QFormLayout" name="windowsSize_formLayout">
+               <property name="labelAlignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="formAlignment">
+                <set>Qt::AlignCenter</set>
+               </property>
                <property name="horizontalSpacing">
                 <number>6</number>
                </property>
@@ -333,12 +323,18 @@
                <item row="0" column="0">
                 <widget class="QLabel" name="bvpWindowsSize_label">
                  <property name="text">
-                  <string>BVP windows size [seconds]</string>
+                  <string>BVP [seconds]</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
                 <widget class="QSpinBox" name="bvpWindowsSize_spinBox">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="minimum">
                   <number>5</number>
                  </property>
@@ -353,12 +349,18 @@
                <item row="1" column="0">
                 <widget class="QLabel" name="gsrWindowsSize_label">
                  <property name="text">
-                  <string>GSR windows size [seconds]</string>
+                  <string>GSR [seconds]</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QSpinBox" name="gsrWindowsSize_spinBox">
+                <widget class="QSpinBox" name="tmpWindowsSize_spinBox">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="minimum">
                   <number>5</number>
                  </property>
@@ -373,12 +375,18 @@
                <item row="2" column="0">
                 <widget class="QLabel" name="tmpWindowsSize_label">
                  <property name="text">
-                  <string>TMP windows size [seconds]</string>
+                  <string>TMP [seconds]</string>
                  </property>
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QSpinBox" name="tmpWindowsSize_spinBox">
+                <widget class="QSpinBox" name="gsrWindowsSize_spinBox">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="minimum">
                   <number>5</number>
                  </property>
@@ -393,12 +401,18 @@
                <item row="3" column="0">
                 <widget class="QLabel" name="accWindowsSize_label">
                  <property name="text">
-                  <string>ACC windows size [seconds]</string>
+                  <string>ACC [seconds]</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="1">
                 <widget class="QSpinBox" name="accWindowsSize_spinBox">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="minimum">
                   <number>5</number>
                  </property>
@@ -412,72 +426,203 @@
                </item>
               </layout>
              </item>
-             <item>
-              <layout class="QHBoxLayout" name="controls_horizontalLayout">
-               <item>
-                <spacer name="controls_left_horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>13</width>
-                   <height>17</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QPushButton" name="btn_start">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>75</width>
-                   <height>17</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>74</width>
-                   <height>17</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Start</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="controls_rigth_horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>13</width>
-                   <height>17</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
             </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="minimumSize">
+             <size>
+              <width>260</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>260</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Recording controls</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>243</width>
+               <height>67</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="2" column="2">
+               <widget class="QSpinBox" name="PORT_spinBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>70</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="Highlight">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>255</green>
+                      <blue>127</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="HighlightedText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>190</red>
+                      <green>209</green>
+                      <blue>247</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="Highlight">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>255</green>
+                      <blue>127</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="HighlightedText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>190</red>
+                      <green>209</green>
+                      <blue>247</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="Highlight">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>38</red>
+                      <green>42</green>
+                      <blue>48</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="HighlightedText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>190</red>
+                      <green>209</green>
+                      <blue>247</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="minimum">
+                 <number>10000</number>
+                </property>
+                <property name="maximum">
+                 <number>11000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="btn_trigger">
+                <property name="minimumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Trigger</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_start">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Start</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="IP_textEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>localhost</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
           <item>
            <widget class="QGroupBox" name="log_groupBox">
             <property name="minimumSize">
              <size>
-              <width>250</width>
-              <height>200</height>
+              <width>260</width>
+              <height>30</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>250</width>
+              <width>260</width>
               <height>16777215</height>
              </size>
             </property>
@@ -541,7 +686,7 @@
              <property name="frameShadow">
               <enum>QFrame::Plain</enum>
              </property>
-             <property name="canvasBackground">
+             <property name="canvasBackground" stdset="0">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
                 <red>10</red>
@@ -566,7 +711,7 @@
                <height>100</height>
               </size>
              </property>
-             <property name="canvasBackground">
+             <property name="canvasBackground" stdset="0">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
                 <red>10</red>
@@ -591,7 +736,7 @@
                <height>100</height>
               </size>
              </property>
-             <property name="canvasBackground">
+             <property name="canvasBackground" stdset="0">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
                 <red>10</red>
@@ -616,7 +761,7 @@
                <height>100</height>
               </size>
              </property>
-             <property name="canvasBackground">
+             <property name="canvasBackground" stdset="0">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
                 <red>10</red>
@@ -646,8 +791,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>1026</width>
+     <height>32</height>
     </rect>
    </property>
   </widget>

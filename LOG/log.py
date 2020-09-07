@@ -19,7 +19,6 @@ class log():
         self.tf_green.setForeground(QtGui.QBrush(QtCore.Qt.green))
         self.tf_red.setForeground(QtGui.QBrush(QtCore.Qt.red))
         
-        
     def myprint(self, text):
         self.logger.setCurrentCharFormat(self.tf)
         self.logger.appendPlainText(text)

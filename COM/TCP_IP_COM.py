@@ -156,9 +156,10 @@ class mysocket(Thread):
             self.send_msg(message)
             time.sleep(0.1)
         
-    def openPort(self, port):
+    def openPort(self, IP, PORT):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_address = ('localhost', port)#para la empatica 8000
+        server_address = (IP, PORT)
+        print('openport: ', server_address)
         self.sock.connect(server_address)
         self.log.myprint("Connected to Empatica Server")
           

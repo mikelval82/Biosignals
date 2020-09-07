@@ -10,6 +10,7 @@ from COM import TCP_IP_COM as sock
 from GUI.biosignals_GUI_01 import GUI 
 from COM.trigger_server_3 import trigger_server
 from GENERAL.slots_manager import SlotsManager
+from GENERAL.constants_00 import constants
 from PyQt5 import QtWidgets, QtCore
 import sys
 
@@ -18,14 +19,17 @@ class MyApp(QtWidgets.QApplication):
         #super(MyApp, self).__init__(['']) 
         QtWidgets.QApplication.__init__(self,[''])
         self.aboutToQuit.connect(self.closeWindows)
+        ########## GENERAL CONSTANT VALUES ##################
+        self.constants = constants()
          ####### logic control #######
         self.trigger_control = False
         self.pause_control = True
         ####### States and Substates #########
         self.state = "SERVER"
         self.substate = ""
+        self.trigger_server_activated = False
         ################# init GUI ################################
-        self.gui = GUI(self,callbacks = [self.server, self.refresh, self.connect, self.start])   
+        self.gui = GUI(self,callbacks = [self.server, self.refresh, self.connect, self.start, self.launch_trigger_server])   
         ########## slots manager #########
         self.slots = SlotsManager()
         ######### data managers #################
@@ -33,15 +37,22 @@ class MyApp(QtWidgets.QApplication):
         for dmg in self.dmgs:
             dmg.trigger_control = self.trigger_control
         self.dmgs[0].buffer.emitter.connect(self.slots.trigger)
-        ################## start trigger notifier ##################
-        self.ADDRESS = 'localhost'
-        self.toADDRESS =  '10.1.28.117'
-        self.PORT = 10003
-        self.trigger_server = trigger_server(address = self.ADDRESS, port = self.PORT)
-        self.trigger_server.create_socket()
-        self.trigger_server.start()
-        self.trigger_server.new_COM.connect(self.trigger_event) 
-        self.gui.log.myprint('Trigger server waiting for connection.')
+        
+    def launch_trigger_server(self):
+        if self.trigger_server_activated:
+            self.trigger_server.close_socket()
+            del self.trigger_server
+            self.trigger_server_activated = False
+        else:
+            self.trigger_server = trigger_server(self.constants)
+            self.trigger_server.socket_emitter.connect(self.trigger_event)
+            self.trigger_server.log_emitter.connect(self.gui.log.myprint)
+            self.trigger_server_activated = self.trigger_server.create_socket()
+            if self.trigger_server_activated:
+                self.trigger_server.start()  
+            else:
+                del self.trigger_server
+            
     
     @QtCore.pyqtSlot(str)    
     def trigger_event(self, action):  
@@ -95,8 +106,8 @@ class MyApp(QtWidgets.QApplication):
             try:
                 ##THREAD CREATE
                 self.thread = sock.mysocket(self.gui.log, self.dmgs, callbacks = [self.device_list_slot, self.device_connect_slot, self.data_pause_slot, self.data_subscribe_slot])       
-                EMPATICA_PORT = 8000  
-                self.thread.openPort(EMPATICA_PORT)
+                print(self.constants.E4_server_ADDRESS, self.constants.EMPATICA_PORT)
+                self.thread.openPort(self.constants.E4_server_ADDRESS, self.constants.EMPATICA_PORT)
                 self.thread.start()
                 self.state = "DEVICE"
                 self.substate = "WAIT_BUTTON"

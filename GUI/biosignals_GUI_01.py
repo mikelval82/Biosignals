@@ -42,10 +42,16 @@ class GUI():
         self.bio_graph.btn_refresh.clicked.connect(callbacks[1])
         self.bio_graph.btn_connect.clicked.connect(callbacks[2])
         self.bio_graph.btn_start.clicked.connect(callbacks[3])
+        self.bio_graph.btn_trigger.clicked.connect(callbacks[4])
         self.bio_graph.bvpWindowsSize_spinBox.valueChanged.connect(lambda:  self.windowsSize(0))
         self.bio_graph.gsrWindowsSize_spinBox.valueChanged.connect(lambda:  self.windowsSize(1))
         self.bio_graph.tmpWindowsSize_spinBox.valueChanged.connect(lambda:  self.windowsSize(2))
         self.bio_graph.accWindowsSize_spinBox.valueChanged.connect(lambda:  self.windowsSize(3))    
+        
+        self.bio_graph.PORT_spinBox.valueChanged.connect(lambda: self.set_PORT())
+        self.bio_graph.IP_textEdit.textChanged.connect(lambda: self.set_IP())
+        self.bio_graph.E4_server_IP_textEdit.textChanged.connect(lambda: self.set_E4_server_IP())
+        
         self.bio_graph.btn_user.clicked.connect(self.saveFileDialog)
         self.bio_graph.btn_loadScript.clicked.connect(self.openFileNameDialog)
         ###############  set timers for updating plots #############
@@ -75,6 +81,15 @@ class GUI():
             self.dmgs[ind].setWindow(self.bio_graph.tmpWindowsSize_spinBox.value())
         elif ind == 3:
             self.dmgs[ind].setWindow(self.bio_graph.accWindowsSize_spinBox.value())
+            
+    def set_PORT(self):
+        self.app.constants.update('port', self.bio_graph.PORT_spinBox.value())
+        
+    def set_IP(self):
+        self.app.constants.update('IP', self.bio_graph.IP_textEdit.text())
+    
+    def set_E4_server_IP(self):
+        self.app.constants.update('E4_server_ADDRESS', self.bio_graph.E4_server_IP_textEdit.text())
         
     def startTimers(self):
         self.dmgs[0].clearBuffer()
@@ -157,7 +172,7 @@ class GUI():
         self.bio_graph.btn_connect.setEnabled(False)
         self.bio_graph.btn_start.setEnabled(False)
         self.bio_graph.device_comboBox.setEnabled(False)
-        self.bio_graph.btn_server.setText("Empatica server connect")
+        self.bio_graph.btn_server.setText("E4 server link")
         self.bio_graph.btn_connect.setText("Connect")
         self.bio_graph.btn_start.setText("Start")
         
@@ -169,7 +184,7 @@ class GUI():
         self.bio_graph.btn_connect.setEnabled(True)
         self.bio_graph.btn_start.setEnabled(False)
         self.bio_graph.device_comboBox.setEnabled(True)
-        self.bio_graph.btn_server.setText("Empatica server disconnect")
+        self.bio_graph.btn_server.setText("E4 server unlink")
         self.bio_graph.btn_connect.setText("Connect")
         self.bio_graph.btn_start.setText("Start")
         
