@@ -1,0 +1,742 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Hardware
+\end_layout
+
+\begin_layout Standard
+The following device has been used for the BIOSIGNALS:
+\end_layout
+
+\begin_layout Enumerate
+Empatica E4 wristband by a Massachusetts Institute of Technology (MIT) spin-off.
+\end_layout
+
+\begin_layout Subsection
+Empatica E4
+\end_layout
+
+\begin_layout Standard
+The E4 is a medical-grade wearable device that offers real-time physiological
+ data acquisition.
+ It measures blood volume pulse, from which heart rate variability can be
+ derived, captures motion-based activity with a three-axis accelerometer,
+ measures the constantly fluctuating changes in certain electrical properties
+ of the skin (GSR), and reads peripheral skin temperature.
+ It allows the synchronization of such signals by the use of an internal
+ clock.
+ The GSR and temperature sensors have a sampling rate of 
+\begin_inset Formula $4Hz$
+\end_inset
+
+ while the accelerometers and the BVP signal are measured at 
+\begin_inset Formula $64Hz$
+\end_inset
+
+.
+ The combination of the GSR and BVP sensors enables to simultaneously measure
+ the balance of sympathetic nervous system activity and heart rate.
+ More detailed information can be found at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.empatica.com/en-eu/research/e4/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Software
+\end_layout
+
+\begin_layout Standard
+All the code has been developed with pure python libraries in an object-oriented
+ paradigm.
+ The software engineering process was carried out taking into account cohesion
+ and coupling for proper modularization.
+ This allows the applications to be modular, scalable, and easy to maintain;
+ in fact, this is a key aspect of any scientific tool to allow researchers
+ to make modifications and to fulfill the specific requirements of each
+ experimental scenario.
+\end_layout
+
+\begin_layout Standard
+The philosophy of BIOSIGNALS application is based on a supervised machine
+ learning approach and therefore it offers two modes of interaction: 
+\end_layout
+
+\begin_layout Itemize
+The first allows for real-time acquisition and processing to generate a
+ database and build models.
+\end_layout
+
+\begin_layout Itemize
+The second provides online signal processing using pre-trained models to
+ classify physiological patterns.
+ 
+\end_layout
+
+\begin_layout Standard
+The proposed application is versatile and easily adaptable to different
+ experimental designs while maintaining high-performance real-time signal
+ processing.
+ Aware that pattern recognition is in constant development, BIOSIGNALS applicati
+on offers the option of importing python external scripts, which must have
+ a predefined structure, to include self-developed machine learning methodologie
+s.
+ Besides, as experimental designs require event synchronization, a TCP/IP
+ interface has been provided.
+ BIOSIGNALS application is expected to be accessible to the entire scientific
+ community, providing a resourceful tool for experimental paradigms of human
+ behavior, which encompasses the following functionalities:
+\end_layout
+
+\begin_layout Itemize
+Real-time acquisition and visualization of physiological signals.
+\end_layout
+
+\begin_layout Itemize
+Trigger synchronization by a TCP/IP interface that allows start/stop the
+ recordings remotely.
+\end_layout
+
+\begin_layout Itemize
+Recording of data on European Data Format (EDF) for physiological signals.
+\end_layout
+
+\begin_layout Itemize
+Online behavior labeling interface whose labels are synchronized and stored
+ in the EDF files.
+\end_layout
+
+\begin_layout Itemize
+Online signal processing with self-developed methodologies through the possibili
+ty of importing external python scripts.
+\end_layout
+
+\begin_layout Subsection
+Biosignals application
+\end_layout
+
+\begin_layout Description
+Title: General BVP, GSR, temperature (TMP) and accelerometers (ACC) experimentat
+ion in real-time, an open source software for physiological real-time experiment
+al designs
+\end_layout
+
+\begin_layout Description
+Authors: Mikel Val Calvo
+\end_layout
+
+\begin_layout Description
+URL: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/mikelval82/Biosignals
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+License: GNU General Public License v3.0
+\end_layout
+
+\begin_layout Description
+DOI: 
+\begin_inset CommandInset href
+LatexCommand href
+name "10.5281/zenodo.3759262"
+target "https://doi.org/10.5281/zenodo.3759262"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+This application has been built to further the research on the study of
+ physiological signals, such as BVP, GSR, temperature (TMP) and accelerometers
+ (ACC), related to human behavior, with the use of the Empatica E4 wristband.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BIOSIGNALS:-General-physiologica"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the layout of the BIOSIGNALS interface.
+ Each section has been numbered to properly explain the role of each of
+ the components: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !b
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../tesis-lyx-bib/figs/biosignals_noted.png
+	lyxscale 15
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BIOSIGNALS: General physiological experimentation in real-time, an open
+ source software for real-time physiological signals acquisition and processing
+ with the Empatica E4 wristband.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BIOSIGNALS:-General-physiologica"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set Users: Allows for setting the name of the user file where acquired data
+ will be stored.
+\end_layout
+
+\begin_layout Enumerate
+Load Script: For loading external python scripts developed by users for
+ specific experiments.
+\end_layout
+
+\begin_layout Enumerate
+Empatica Server Connect/Disconnect: Enables the connection and disconnection
+ between the Empatica Server and the Biosignals.
+\end_layout
+
+\begin_layout Enumerate
+Empatica ID: A spin box to specify to which Empatica E4 device to connect.
+\end_layout
+
+\begin_layout Enumerate
+Refresh: Requests to the Empatica Server the ID of Empatica E4 devices available.
+\end_layout
+
+\begin_layout Enumerate
+Connect: Enables the connection and disconnection between the specified
+ device through the Empatica Server and the Biosignals driver.
+\end_layout
+
+\begin_layout Enumerate
+BVP Window size (seconds): A Spin Box to set the window size of the BVP
+ signal.
+\end_layout
+
+\begin_layout Enumerate
+GSR Window size (seconds): A Spin Box to set the window size of the GSR
+ signal.
+\end_layout
+
+\begin_layout Enumerate
+TMP Window size (seconds): A Spin Box to set the window size of the TMP
+ signal.
+\end_layout
+
+\begin_layout Enumerate
+ACC Window size (seconds): A Spin Box to set the window size of the ACC
+ signals.
+\end_layout
+
+\begin_layout Enumerate
+Start/Stop: A button to start/stop real-time visualization.
+\end_layout
+
+\begin_layout Enumerate
+Log viewer: Shows information regarding the internal state of the application.
+\end_layout
+
+\begin_layout Enumerate
+BVP Long Term View: Allows the visualization in real-time of acquired BVP
+ signals.
+\end_layout
+
+\begin_layout Enumerate
+GSR Long Term View: Allows the visualization in real-time of acquired GSR
+ signals.
+\end_layout
+
+\begin_layout Enumerate
+TMP Long Term View: Allows the visualization in real-time of acquired TMP
+ signals.
+\end_layout
+
+\begin_layout Enumerate
+ACC Long Term View: Allows the visualization in real-time of acquired ACC
+ signals.
+\end_layout
+
+\begin_layout Subsection
+Software design principles
+\end_layout
+
+\begin_layout Standard
+As mentioned before, the design principles have been followed taking into
+ account cohesion and coupling for proper modularization.
+ Therefore, a high-level description is provided that allows us to understand
+ the design principles.
+ As can be noted in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flow-diagram."
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ where the high-level flow diagram scheme is detailed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../tesis-lyx-bib/figs/diseño_software.png
+	lyxscale 50
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flow diagram.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flow-diagram."
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+APP: This class serves as the main software module that builds the application.
+ It has been designed using PyQt5, a Python binding of the cross-platform
+ graphical user interface (GUI) toolkit Qt, implemented as a Python plug-in.
+ It launches all the other modules and forks several processes.
+ First, the APP main fork.
+ Second, a Driver is forked for each device, using the multiprocessing python
+ library.
+ Finally, it forks a thread for each Data Manager, using the multithreading
+ python library.
+\end_layout
+
+\begin_layout Itemize
+Constants: Sets the whole constants used along with the application.
+ Thus facilitating the specification of such general variables in a unique
+ module.
+ All adjustable parameters are set in this object.
+\end_layout
+
+\begin_layout Itemize
+Queue: This Queue follows the FIFO rule.
+\end_layout
+
+\begin_layout Itemize
+Ring Buffer: Stores the last values for each sampled source of information.
+ The fixed size is defined by default in the Constants but it can also be
+ dynamically modified during the GUI interaction through the 'Window size'
+ Spin Box.
+ Each time the fixed size is modified, the Ring Buffer is emptied.
+\end_layout
+
+\begin_layout Itemize
+Driver: Meets the requirements of the real-time acquisition.
+ It inherits from multiprocessing python library.
+ It offers the interface between the APP and the hardware.
+ Inter-process communication is facilitated by Queue.
+ Once the fork starts running, iterates acquiring samples that are indefinitely
+ queued.
+\end_layout
+
+\begin_layout Itemize
+Data Manager: It is defined as an interface between the GUI and the Driver
+ to properly separate the management of the acquired data.
+ It inherits from a multithreading python library.
+ It has access to the shared Queue so its role consist on extracting iteratively
+ samples from the queue to insert them on a Ring Buffer.
+\end_layout
+
+\begin_layout Itemize
+GUI Manager: Offers the management of each of the components of the GUI.
+\end_layout
+
+\begin_layout Itemize
+GUI.ui: Implements the APP graphics.
+ It has been designed using QtDesigner, the Qt tool for designing and building
+ GUIs.
+\end_layout
+
+\begin_layout Itemize
+Trigger Server: A TCP/IP server for event synchronization.
+ It can receive client connections and handles each request by notifying
+ the Slots Manager using a callback function.
+\end_layout
+
+\begin_layout Itemize
+Slots Manager: The purpose of this module is to bring the application to
+ the versatility of adding a set of callbacks that allow synchronizing the
+ overall logic.
+\end_layout
+
+\begin_layout Itemize
+Online Filtering: This module has been implemented as an interface for a
+ set of real-time signal processing methods.
+\end_layout
+
+\begin_layout Itemize
+Modules Loader: The main purpose of this module is to expand the versatility
+ of the APP for a wide range of research scenarios.
+ It is required that users code the scripts with a predefined structure
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Imported-python-scripts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The module will receive a reference to the APP instance so total access
+ to the underlying object instances is offered.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\ttfamily},columns=fullflexible,aboveskip=0pt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# -- Add imports -- 
+\end_layout
+
+\begin_layout Plain Layout
+
+# import numpy as np
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# -- Class  definition --
+\end_layout
+
+\begin_layout Plain Layout
+
+class  pipeline():
+\end_layout
+
+\begin_layout Plain Layout
+
+  ''' Predefined structure.'''
+\end_layout
+
+\begin_layout Plain Layout
+
+  def __init__(self, app):
+\end_layout
+
+\begin_layout Plain Layout
+
+      # -- initialize variables --
+\end_layout
+
+\begin_layout Plain Layout
+
+      self.log = app.log
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  def run(self):
+\end_layout
+
+\begin_layout Plain Layout
+
+      # -- code desired behaviour --
+\end_layout
+
+\begin_layout Plain Layout
+
+      self.log.update_text('Start computing the user module.')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Imported python scripts required structure.
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Imported-python-scripts"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Main workflow scheme:
+\end_layout
+
+\begin_layout Standard
+Once BIOSIGNALS app is launched it can work as follows; Data Manager is
+ threaded and starts iteratively trying to extract values from the queue.
+ The thread runs a loop that is controlled by a logical condition.
+ The iteration process cannot acquire data if the queue is empty.
+ Then, the Driver is forked and automatically detects the corresponding
+ device to connect with.
+ Following, the driver starts iteratively stacking data into the Queue from
+ the hardware.
+ Both the thread and the fork form a consumer-producer system.
+ The Ring Buffer acts as a short term memory.
+ The Data Manager fills the Ring Buffer each time a new value is obtained
+ from the Queue.
+ Once the Ring Buffer is full, it starts overwriting the oldest data and
+ so on.
+ At this point, two stages are provided:
+\end_layout
+
+\begin_layout Itemize
+Stage 1: Real-time visualization can be performed by pushing the start button.
+ It does not imply user data storage.
+ The start button has been designed to test the quality of the signal acquisitio
+n.
+ The start button state will be changed, so pushing it again will stop visualiza
+tion.
+ Parameter settings (user filename, filter order, window size, online artifact
+ removal method, and so on) should be done on this stage.
+\end_layout
+
+\begin_layout Itemize
+Stage 2: Once the signals are properly acquired, the Trigger button can
+ be pushed that initializes a TCP/IP server.
+ The application only stores data in between a pair of client received requests.
+ It is expected that one request indicates the start instant for event synchroni
+zation while the second, the stop instant.
+ For the following, two pairs of events form a trial.
+ During the trial duration, the Ring Buffer slots a callback to the Data
+ Manager whenever an amount of data equal to the window size is fulfilled,
+ that is, a sample is generated.
+ At the end of the event, the Data Manager permanently stores acquired samples
+ in the users' file with its corresponding metadata.
+ Data Manager counts the number of samples generated and the number of trials,
+ other metadata values are obtained from the Constants module.
+\end_layout
+
+\begin_layout Paragraph
+Versatile workflow scheme
+\end_layout
+
+\begin_layout Standard
+Modules Loader allows the definition of own produced scripts.
+ Each imported script must follow a predefined structure.
+ The versatility comes due to the reference given to the imported script
+ to the main object instance.
+ Thus, different scenarios could be provided through this component.
+\end_layout
+
+\begin_layout Itemize
+Offline scenario: The user could experiment with the main workflow scheme.
+ After collecting the required data, a script could be loaded containing
+ the coding for an offline analysis, i.e., training a machine learning model
+ and store it on disk for future use.
+\end_layout
+
+\begin_layout Itemize
+Online scenario: The user, could perform online computation thanks to the
+ reference given, having access to all the underlying object instances.
+ Access to the Data Manager to acquire EEG samples online is therefore provided.
+ Moreover, applying OAR methods or even using pre-trained machine-learning
+ models for online predictions can be also easily implemented.
+\end_layout
+
+\begin_layout Standard
+The main highlights of the application consist of its versatility: First,
+ modularizing the interaction between the GUI manager and the Driver, which
+ allows the embedding of drivers for other acquisition systems.
+ Second, the separation between the GUI and the logic, where the former
+ allows future modifications and performance of the GUI components, without
+ altering the logic, and vice-versa; Finally, the Modules Loader, further
+ expands the versatility, by offering the flexibility of incorporating self-deve
+loped scripts for specific scenarios and workflow schemes.
+ The proposed application IS versatile and easily adaptable to different
+ experimental scenarios while maintaining high-performance signal processing
+ in real-time.
+\end_layout
+
+\end_body
+\end_document
