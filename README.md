@@ -9,8 +9,7 @@ EDF files.
 
 # INSTRUCTIONS:
 1) Install requirements: pip install requirements.txt
-2) In the folder ./GENERAL/constants_02.py tcp/ip ADDRESS must be set: '10.1.25.82' (your IP)
-3) Run BCI_STANDARD_EXPERIMENT_03.py
+2) Run BCI_STANDARD_EXPERIMENT_03.py
 
 # CITATION:
 @DOI: 10.5281/zenodo.3759262 
