@@ -10,6 +10,9 @@ EDF files.
 # APP:
 ![Image description](https://github.com/mikelval82/BIOSIGNALS/blob/master/images/BIOSIGNALS.png)
 
+# COMPATIBLE:
+Windows and Linux
+
 # DEPENDENCIES:
 ```
 PyQt5
