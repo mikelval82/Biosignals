@@ -1,8 +1,0 @@
-PyQt5
-pandas
-python-csv
-importlib
-PythonQwt
-pyEDFlib
-pyhrv
-scipy
