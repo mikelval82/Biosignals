@@ -9,14 +9,16 @@ EDF files.
 
 # INSTRUCTIONS:
 Install dependencies:
--PyQt5
--pyhrv
--PythonQwt
--scipy
--pandas
--matplotlib
--numpy
--pyEDFlib
+```
+PyQt5
+pyhrv
+PythonQwt
+scipy
+pandas
+matplotlib
+numpy
+pyEDFlib
+```
 
 # USE EXAMPLE:
 1) Run in one terminal:
@@ -27,8 +29,10 @@ python BCI_STANDARD_EXPERIMENT_03.py
 3) Set IP and PORT in the app and click the trigger button
 
 4) Run in another terminal:
+```
 python
-
+```
+5) Create a client
 ```
 from COM.trigger_client import trigger_client
 
