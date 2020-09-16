@@ -7,7 +7,13 @@
 2.2-conda create -n biosignals
 2.3-conda activate biosignals
 
-3-Install requirements.txt:
-3.1-cd Path/to/requirements.txt
-3.1-pip install -r requirements.txt
+3-Install dependencies:
+-PyQt5
+-pyhrv
+-PythonQwt
+-scipy
+-pandas
+-matplotlib
+-numpy
+-pyEDFlib
 

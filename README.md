@@ -8,8 +8,51 @@ remotely.
 EDF files.
 
 # INSTRUCTIONS:
-1) Install requirements: pip install requirements.txt
-2) Run BCI_STANDARD_EXPERIMENT_03.py
+Install dependencies:
+-PyQt5
+-pyhrv
+-PythonQwt
+-scipy
+-pandas
+-matplotlib
+-numpy
+-pyEDFlib
+
+# USE EXAMPLE:
+1) Run in one terminal:
+python BCI_STANDARD_EXPERIMENT_03.py
+
+2) Set the user filename
+
+3) Set IP and PORT in the app and click the trigger button
+
+4) Run in another terminal:
+python
+
+```
+from COM.trigger_client import trigger_client
+
+tc = trigger_client('IP','PORT')
+tc.create_socket()
+tc.connect()
+```
+Then you are ready to start the recording.
+
+```
+tc.send_msg(b'start')
+```
+Labels can be sent asynchronously during the recording and will be stored as events in the EDF user file.
+
+```
+tc.send_msg(b'happy')
+```
+
+To stop the recording and save the temporal series in the user EDF file.
+
+```
+tc.send_msg(b'stop')
+```
+
 
 # CITATION:
 @DOI: 10.5281/zenodo.3759262 
