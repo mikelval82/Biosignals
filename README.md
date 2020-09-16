@@ -22,8 +22,9 @@ pyEDFlib
 
 # USE EXAMPLE:
 1) Run in one terminal:
+```
 python BCI_STANDARD_EXPERIMENT_03.py
-
+```
 2) Set the user filename
 
 3) Set IP and PORT in the app and click the trigger button
