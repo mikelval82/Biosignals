@@ -7,6 +7,9 @@ remotely.
 4. Online behaviour labelling interface which labels are synchronised and stored on
 EDF files.
 
+# APP:
+![Image description](https://github.com/mikelval82/BIOSIGNALS/blob/master/images/BIOSIGNALS.png)
+
 # DEPENDENCIES:
 ```
 PyQt5
