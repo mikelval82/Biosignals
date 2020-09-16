@@ -22,7 +22,7 @@ pyEDFlib
 # USE EXAMPLE:
 1) Run in one terminal:
 ```
-python BCI_STANDARD_EXPERIMENT_03.py
+python BIOSIGNALS_APP_01.py
 ```
 2) Set the user filename
 
