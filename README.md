@@ -7,8 +7,7 @@ remotely.
 4. Online behaviour labelling interface which labels are synchronised and stored on
 EDF files.
 
-# INSTRUCTIONS:
-Install dependencies:
+# DEPENDENCIES:
 ```
 PyQt5
 pyhrv
