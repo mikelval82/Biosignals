@@ -76,7 +76,9 @@
 \begin_body
 
 \begin_layout Title
-BIOSIGNALS
+BIOSIGNALS: General BVP, GSR, temperature (TMP) and accelerometers (ACC)
+ experimentation in real-time, an open source software for physiological
+ real-time experimental designs
 \end_layout
 
 \begin_layout Section

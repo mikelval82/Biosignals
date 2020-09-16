@@ -691,6 +691,11 @@ tion.
 Stage 2: Once the signals are properly acquired, the Trigger button can
  be pushed that initializes a TCP/IP server.
  The application only stores data in between a pair of client received requests.
+ The first request must send a string containing 'start' message to init
+ the recording.
+ The last request must send a string containing 'stop' message.
+ In between, any other string can be sent to allow codification of events
+ that will be stored in the EDF file.
  It is expected that one request indicates the start instant for event synchroni
 zation while the second, the stop instant.
  For the following, two pairs of events form a trial.
