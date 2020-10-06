@@ -13,8 +13,8 @@ from LOG.log import log
 from PyQt5 import QtWidgets, QtCore
 from DATA_MANAGERS.data_manager_02 import data_manager
 
-from qwt.qt.QtCore import Qt
-from qwt.qt.QtGui import QPen, QFont
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPen, QFont
 from qwt import QwtPlotCurve, QwtPlotItem, QwtText
 import numpy as np
 
