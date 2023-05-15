@@ -96,10 +96,10 @@ class GUI():
         self.dmgs[1].clearBuffer()
         self.dmgs[2].clearBuffer()
         self.dmgs[3].clearBuffer()
-        self.bvp_timer.start((1/self.dmgs[0].freqTask)*1000)
-        self.gsr_timer.start((1/self.dmgs[1].freqTask)*1000)
-        self.tmp_timer.start((1/self.dmgs[2].freqTask)*1000)
-        self.acc_timer.start((1/self.dmgs[3].freqTask)*1000)
+        self.bvp_timer.start(int((1/self.dmgs[0].freqTask)*1000))
+        self.gsr_timer.start(int((1/self.dmgs[1].freqTask)*1000))
+        self.tmp_timer.start(int((1/self.dmgs[2].freqTask)*1000))
+        self.acc_timer.start(int((1/self.dmgs[3].freqTask)*1000))
 
     def stopTimers(self):
         self.bvp_timer.stop() 
@@ -145,7 +145,7 @@ class GUI():
     def saveFileDialog(self):    
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
-        fileName, filetype = QtWidgets.QFileDialog.getSaveFileName(self.MainWindow,"QFileDialog.getSaveFileName()","","Text files (*.edf)", options=options)
+        fileName, filetype = QtWidgets.QFileDialog.getSaveFileName(self.MainWindow,"QFileDialog.getSaveFileName()","","Numpy Files (*.npy)", options=options)
         if fileName:
             # set path
             self.dmgs[0].PATH = fileName 

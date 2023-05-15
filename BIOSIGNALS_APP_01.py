@@ -81,7 +81,6 @@ class MyApp(QtWidgets.QApplication):
                     for dmg in self.dmgs:
                         dmg.online_annotation(action)
                         dmg.save_streamData()
-                        dmg.close_file()
                         dmg.reset_data_store()
                         dmg.current_trial += 1
                         dmg.running_window = 0

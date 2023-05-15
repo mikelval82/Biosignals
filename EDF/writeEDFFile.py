@@ -20,7 +20,6 @@ class edf_writter:
         
     def new_file(self,path):
         data_file = os.path.join('.', path)
-        print(self.CHANNELS)
         self.file = pyedflib.EdfWriter(data_file, self.CHANNELS, file_type=pyedflib.FILETYPE_EDFPLUS)
         
         self.channel_info = []
